@@ -1,0 +1,20 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width')
+    title= title
+    style.
+      img {
+      height: 200px;
+      float: left;
+      }
+    block css
+      link(rel='stylesheet', href='/css/style.css')
+    block js
+      script(src="/components/jquery/dist/jquery.js")
+      script(src='/js/application.js', type='text/javascript')
+      if ENV_DEVELOPMENT
+        script(src='http://localhost:35729/livereload.js')
+  body
+    block content
